@@ -459,6 +459,32 @@ h2 {
 .footer-copy a { color: rgba(155,146,132,0.7); text-decoration: none; }
 .footer-copy a:hover { color: var(--muted); }
 
+/* ── FAQ ── */
+.faq { background: var(--bg2); }
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 18px;
+  max-width: 100%;
+}
+.faq-item {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 26px 24px;
+}
+.faq-item h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.faq-item p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 760px) {
   .always-on-inner { grid-template-columns: 1fr; gap: 44px; }
