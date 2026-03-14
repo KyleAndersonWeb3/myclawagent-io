@@ -457,6 +457,12 @@ h2 {
   object-fit: cover;
   flex-shrink: 0;
   border: 2px solid var(--border);
+  background: #111;
+}
+.tweet-avatar.nft-border {
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  border-radius: 12px;
 }
 .tweet-user { flex: 1; display: flex; flex-direction: column; gap: 1px; }
 .tweet-name {
