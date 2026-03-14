@@ -6,17 +6,17 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Claude.ai color palette */
-  --bg:       #1C1917;
-  --bg2:      #211F1C;
-  --bg3:      #272421;
-  --border:   rgba(255,255,255,0.07);
-  --accent:   #D97757;
-  --accent2:  #E8A887;
-  --accent-glow: rgba(217,119,87,0.2);
-  --text:     #EEEBE6;
-  --muted:    #9B9284;
-  --white:    #F5F0EA;
+  /* Black / Cream / Orange */
+  --bg:       #0D0C0A;
+  --bg2:      #131210;
+  --bg3:      #1A1815;
+  --border:   rgba(245,237,210,0.08);
+  --accent:   #E8733A;
+  --accent2:  #F0A06A;
+  --accent-glow: rgba(232,115,58,0.22);
+  --text:     #F5EDD8;
+  --muted:    #9E9178;
+  --white:    #FBF6EC;
 }
 
 html { scroll-behavior: smooth; }
