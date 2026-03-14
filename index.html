@@ -147,7 +147,10 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <img src="logo.svg" alt="MyClawAgent mascot" class="hero-mascot" />
+      <div class="mascot-wrap" id="mascot" title="Click me!">
+    <img src="logo.svg" alt="MyClawAgent mascot" class="hero-mascot" id="mascot-img" />
+    <div class="mascot-shadow"></div>
+  </div>
       <div class="badge">Powered by OpenClaw</div>
       <h1>MyClawAgent<span style="color:var(--accent)">.</span>io</h1>
       <p class="hero-tagline">The AI agent service that actually sets things up.</p>
@@ -536,5 +539,48 @@
     </div>
   </footer>
 
+  <script>
+    const mascot = document.getElementById('mascot');
+    const img = document.getElementById('mascot-img');
+    let clicks = 0;
+    const dances = ['dance-spin','dance-bounce','dance-wiggle','dance-flip'];
+
+    // Click to trigger a random dance move
+    mascot.addEventListener('click', () => {
+      clicks++;
+      dances.forEach(d => img.classList.remove(d));
+      const move = dances[clicks % dances.length];
+      img.classList.add(move);
+      img.addEventListener('animationend', () => img.classList.remove(move), { once: true });
+    });
+
+    // Wander around the hero section randomly
+    const wrap = mascot;
+    let posX = 0, posY = 0;
+    let velX = 0, velY = 0;
+    let wandering = false;
+
+    function wander() {
+      if (wandering) return;
+      wandering = true;
+      const maxX = 80, maxY = 20;
+      velX = (Math.random() - 0.5) * maxX;
+      velY = (Math.random() - 0.5) * maxY;
+      posX = Math.max(-maxX, Math.min(maxX, posX + velX));
+      posY = Math.max(-maxY, Math.min(maxY, posY + velY));
+      wrap.style.transform = `translate(${posX}px, ${posY}px)`;
+      wrap.style.transition = `transform ${1.5 + Math.random()}s cubic-bezier(0.4,0,0.2,1)`;
+      setTimeout(() => { wandering = false; }, 2000 + Math.random() * 1500);
+    }
+
+    // Wander every 2.5s
+    setInterval(wander, 2500);
+
+    // Wiggle on hover
+    mascot.addEventListener('mouseenter', () => {
+      img.classList.add('dance-wiggle');
+      img.addEventListener('animationend', () => img.classList.remove('dance-wiggle'), { once: true });
+    });
+  </script>
 </body>
 </html>
