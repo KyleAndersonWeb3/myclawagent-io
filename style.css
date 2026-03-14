@@ -6,23 +6,23 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Black / Cream / Orange */
-  --bg:       #0D0C0A;
-  --bg2:      #131210;
-  --bg3:      #1A1815;
-  --border:   rgba(245,237,210,0.08);
+  /* Cream / Black / Orange */
+  --bg:       #F5EDD8;
+  --bg2:      #EDE3C8;
+  --bg3:      #E6D9B8;
+  --border:   rgba(30,20,10,0.1);
   --accent:   #E8733A;
-  --accent2:  #F0A06A;
+  --accent2:  #C9561F;
   --accent-glow: rgba(232,115,58,0.22);
-  --text:     #F5EDD8;
-  --muted:    #9E9178;
-  --white:    #FBF6EC;
+  --text:     #1A1208;
+  --muted:    #5A4E38;
+  --white:    #0D0A04;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
   color: var(--text);
   font-size: 16px;
@@ -70,7 +70,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(28,25,23,0.9);
+  background: rgba(245,237,216,0.92);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
