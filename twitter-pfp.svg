@@ -1,47 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
-  <!-- Background -->
-  <rect width="400" height="400" fill="#080706"/>
-  <!-- Subtle orange radial glow -->
-  <radialGradient id="glow" cx="50%" cy="45%" r="50%">
-    <stop offset="0%" stop-color="#E8733A" stop-opacity="0.18"/>
-    <stop offset="100%" stop-color="#080706" stop-opacity="0"/>
+  <!-- Cream background -->
+  <rect width="400" height="400" fill="#F5EDD8" rx="0"/>
+
+  <!-- Subtle warm gradient -->
+  <radialGradient id="bg-glow" cx="50%" cy="42%" r="55%">
+    <stop offset="0%" stop-color="#FAEFD8"/>
+    <stop offset="100%" stop-color="#EDE0C0"/>
   </radialGradient>
-  <rect width="400" height="400" fill="url(#glow)"/>
+  <rect width="400" height="400" fill="url(#bg-glow)"/>
 
-  <!-- Mascot body -->
-  <circle cx="200" cy="210" r="105" fill="#D93B2B"/>
+  <!-- Drop shadow for mascot -->
+  <ellipse cx="200" cy="318" rx="72" ry="14" fill="#D4C4A0" opacity="0.5"/>
 
-  <!-- Antennae -->
-  <circle cx="170" cy="82" r="18" fill="#D93B2B"/>
-  <circle cx="230" cy="82" r="18" fill="#D93B2B"/>
-  <rect x="162" y="82" width="16" height="52" rx="8" fill="#D93B2B"/>
-  <rect x="222" y="82" width="16" height="52" rx="8" fill="#D93B2B"/>
+  <!-- Body -->
+  <circle cx="200" cy="205" r="100" fill="#E8733A"/>
+
+  <!-- Body shine -->
+  <ellipse cx="175" cy="160" rx="28" ry="18" fill="#F0956A" opacity="0.4"/>
+
+  <!-- Antennae stems -->
+  <rect x="163" y="83" width="14" height="48" rx="7" fill="#E8733A"/>
+  <rect x="223" y="83" width="14" height="48" rx="7" fill="#E8733A"/>
+
+  <!-- Antennae tips -->
+  <circle cx="170" cy="76" r="16" fill="#E8733A"/>
+  <circle cx="230" cy="76" r="16" fill="#E8733A"/>
+  <!-- Antennae tip shine -->
+  <circle cx="165" cy="70" r="5" fill="#F0956A" opacity="0.6"/>
+  <circle cx="225" cy="70" r="5" fill="#F0956A" opacity="0.6"/>
 
   <!-- Arms -->
-  <circle cx="82" cy="218" r="24" fill="#D93B2B"/>
-  <circle cx="318" cy="218" r="24" fill="#D93B2B"/>
+  <circle cx="86" cy="215" r="22" fill="#E8733A"/>
+  <circle cx="314" cy="215" r="22" fill="#E8733A"/>
 
   <!-- Legs -->
-  <rect x="168" y="302" width="22" height="36" rx="11" fill="#D93B2B"/>
-  <rect x="210" y="302" width="22" height="36" rx="11" fill="#D93B2B"/>
+  <rect x="168" y="294" width="20" height="34" rx="10" fill="#E8733A"/>
+  <rect x="212" y="294" width="20" height="34" rx="10" fill="#E8733A"/>
 
-  <!-- Eye glow -->
-  <circle cx="172" cy="200" r="34" fill="#00E5CC" opacity="0.2"/>
-  <circle cx="228" cy="200" r="34" fill="#00E5CC" opacity="0.2"/>
+  <!-- Feet -->
+  <ellipse cx="178" cy="330" rx="14" ry="8" fill="#D4601A"/>
+  <ellipse cx="222" cy="330" rx="14" ry="8" fill="#D4601A"/>
 
-  <!-- Eyes -->
-  <circle cx="172" cy="200" r="26" fill="#00E5CC"/>
-  <circle cx="228" cy="200" r="26" fill="#00E5CC"/>
+  <!-- Eye whites -->
+  <circle cx="172" cy="195" r="28" fill="#FFFFFF"/>
+  <circle cx="228" cy="195" r="28" fill="#FFFFFF"/>
+
+  <!-- Iris -->
+  <circle cx="172" cy="195" r="20" fill="#00CDB0"/>
+  <circle cx="228" cy="195" r="20" fill="#00CDB0"/>
 
   <!-- Pupils -->
-  <circle cx="178" cy="206" r="11" fill="#003D35"/>
-  <circle cx="234" cy="206" r="11" fill="#003D35"/>
+  <circle cx="177" cy="200" r="10" fill="#00403A"/>
+  <circle cx="233" cy="200" r="10" fill="#00403A"/>
 
   <!-- Eye shine -->
-  <circle cx="182" cy="197" r="5" fill="white" opacity="0.85"/>
-  <circle cx="238" cy="197" r="5" fill="white" opacity="0.85"/>
+  <circle cx="181" cy="192" r="4.5" fill="white" opacity="0.9"/>
+  <circle cx="237" cy="192" r="4.5" fill="white" opacity="0.9"/>
+  <circle cx="172" cy="203" r="2" fill="white" opacity="0.5"/>
+  <circle cx="228" cy="203" r="2" fill="white" opacity="0.5"/>
+
+  <!-- Smile -->
+  <path d="M183 228 Q200 244 217 228" stroke="#D4601A" stroke-width="4" fill="none" stroke-linecap="round"/>
 
   <!-- Brand text -->
-  <text x="200" y="368" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="28" fill="#F5EDD8" text-anchor="middle" letter-spacing="1">MyClawAgent</text>
-  <text x="200" y="392" font-family="Arial, sans-serif" font-weight="700" font-size="16" fill="#E8733A" text-anchor="middle" letter-spacing="2">.io</text>
+  <text x="200" y="370" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="26" fill="#1A1208" text-anchor="middle" letter-spacing="0.5">MyClawAgent</text>
+  <text x="200" y="392" font-family="'Arial Black', Arial, sans-serif" font-weight="800" font-size="15" fill="#E8733A" text-anchor="middle" letter-spacing="3">.IO</text>
 </svg>
