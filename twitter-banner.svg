@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="500" viewBox="0 0 1500 500">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050403"/>
+      <stop offset="50%" stop-color="#0D0A06"/>
+      <stop offset="100%" stop-color="#080503"/>
+    </linearGradient>
+    <!-- Orange glow radial -->
+    <radialGradient id="glow-center" cx="65%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#E8733A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#050403" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-left" cx="15%" cy="60%" r="30%">
+      <stop offset="0%" stop-color="#E8733A" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050403" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Mascot glow filter -->
+    <filter id="neon-orange" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="neon-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-text" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1500" height="500" fill="url(#bg)"/>
+  <rect width="1500" height="500" fill="url(#glow-center)"/>
+  <rect width="1500" height="500" fill="url(#glow-left)"/>
+
+  <!-- Grid lines (subtle) -->
+  <g opacity="0.06" stroke="#E8733A" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1500" y2="100"/>
+    <line x1="0" y1="200" x2="1500" y2="200"/>
+    <line x1="0" y1="300" x2="1500" y2="300"/>
+    <line x1="0" y1="400" x2="1500" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="800" y1="0" x2="800" y2="500"/>
+    <line x1="1000" y1="0" x2="1000" y2="500"/>
+    <line x1="1200" y1="0" x2="1200" y2="500"/>
+    <line x1="1400" y1="0" x2="1400" y2="500"/>
+  </g>
+
+  <!-- CLAW CHART — rising line made of claw shapes -->
+  <!-- Main rising line -->
+  <polyline points="60,420 150,380 240,360 310,300 390,260 460,220 530,190 600,160 660,130 720,110" fill="none" stroke="#E8733A" stroke-width="2.5" stroke-linecap="round" opacity="0.7" filter="url(#neon-soft)"/>
+  <!-- Dotted secondary line -->
+  <polyline points="60,440 150,410 240,395 310,340 390,305 460,270 530,242 600,215 660,188 720,165" fill="none" stroke="#E8733A" stroke-width="1" stroke-dasharray="6,8" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Claw markers on chart points (hollow claw/pincer shapes) -->
+  <g fill="none" stroke="#E8733A" stroke-width="2" filter="url(#neon-soft)">
+    <!-- Claw at point 1 -->
+    <path d="M150,380 C145,368 138,362 132,365 C126,368 125,378 130,383 C135,388 145,385 150,380Z" opacity="0.8"/>
+    <path d="M150,380 C155,368 162,362 168,365 C174,368 175,378 170,383 C165,388 155,385 150,380Z" opacity="0.8"/>
+    <!-- Claw at point 2 -->
+    <path d="M310,300 C305,288 298,282 292,285 C286,288 285,298 290,303 C295,308 305,305 310,300Z" opacity="0.8"/>
+    <path d="M310,300 C315,288 322,282 328,285 C334,288 335,298 330,303 C325,308 315,305 310,300Z" opacity="0.8"/>
+    <!-- Claw at point 3 -->
+    <path d="M460,220 C455,208 448,202 442,205 C436,208 435,218 440,223 C445,228 455,225 460,220Z" opacity="0.8"/>
+    <path d="M460,220 C465,208 472,202 478,205 C484,208 485,218 480,223 C475,228 465,225 460,220Z" opacity="0.8"/>
+    <!-- Claw at point 4 -->
+    <path d="M600,160 C595,148 588,142 582,145 C576,148 575,158 580,163 C585,168 595,165 600,160Z" opacity="0.9"/>
+    <path d="M600,160 C605,148 612,142 618,145 C624,148 625,158 620,163 C615,168 605,165 600,160Z" opacity="0.9"/>
+    <!-- Claw at peak -->
+    <path d="M720,110 C715,98 708,92 702,95 C696,98 695,108 700,113 C705,118 715,115 720,110Z" opacity="1"/>
+    <path d="M720,110 C725,98 732,92 738,95 C744,98 745,108 740,113 C735,118 725,115 720,110Z" opacity="1"/>
+  </g>
+
+  <!-- Vertical candle-like bars (hollow) -->
+  <g fill="none" stroke="#E8733A" stroke-width="1.5" opacity="0.5">
+    <rect x="140" y="360" width="20" height="40" rx="2"/>
+    <line x1="150" y1="355" x2="150" y2="360"/>
+    <line x1="150" y1="400" x2="150" y2="410"/>
+
+    <rect x="300" y="278" width="20" height="42" rx="2"/>
+    <line x1="310" y1="270" x2="310" y2="278"/>
+    <line x1="310" y1="320" x2="310" y2="332"/>
+
+    <rect x="450" y="198" width="20" height="44" rx="2"/>
+    <line x1="460" y1="190" x2="460" y2="198"/>
+    <line x1="460" y1="242" x2="460" y2="252"/>
+
+    <rect x="590" y="138" width="20" height="44" rx="2"/>
+    <line x1="600" y1="128" x2="600" y2="138"/>
+    <line x1="600" y1="182" x2="600" y2="195"/>
+  </g>
+
+  <!-- LARGE HOLLOW FUTURISTIC MASCOT (wireframe/hologram style) -->
+  <g transform="translate(880, 30) scale(1.7)" fill="none" filter="url(#neon-orange)">
+    <!-- Body outline -->
+    <circle cx="130" cy="165" r="100" stroke="#E8733A" stroke-width="2.5" opacity="0.9"/>
+    <!-- Inner body detail ring -->
+    <circle cx="130" cy="165" r="85" stroke="#E8733A" stroke-width="0.8" opacity="0.3" stroke-dasharray="8,6"/>
+
+    <!-- Antennae -->
+    <line x1="115" y1="68" x2="108" y2="35" stroke="#E8733A" stroke-width="2" opacity="0.9"/>
+    <line x1="145" y1="68" x2="152" y2="35" stroke="#E8733A" stroke-width="2" opacity="0.9"/>
+    <circle cx="108" cy="30" r="9" stroke="#E8733A" stroke-width="2" opacity="0.9"/>
+    <circle cx="152" cy="30" r="9" stroke="#E8733A" stroke-width="2" opacity="0.9"/>
+    <!-- Antenna tip glow dots -->
+    <circle cx="108" cy="30" r="3" fill="#E8733A" opacity="0.7"/>
+    <circle cx="152" cy="30" r="3" fill="#E8733A" opacity="0.7"/>
+
+    <!-- Arms -->
+    <circle cx="22" cy="172" r="18" stroke="#E8733A" stroke-width="2" opacity="0.8"/>
+    <circle cx="238" cy="172" r="18" stroke="#E8733A" stroke-width="2" opacity="0.8"/>
+
+    <!-- Legs -->
+    <rect x="100" y="254" width="14" height="28" rx="7" stroke="#E8733A" stroke-width="2" opacity="0.8"/>
+    <rect x="146" y="254" width="14" height="28" rx="7" stroke="#E8733A" stroke-width="2" opacity="0.8"/>
+
+    <!-- Eyes - hollow teal rings -->
+    <circle cx="108" cy="155" r="24" stroke="#00CDB0" stroke-width="2.5" opacity="0.9"/>
+    <circle cx="152" cy="155" r="24" stroke="#00CDB0" stroke-width="2.5" opacity="0.9"/>
+    <!-- Eye inner rings -->
+    <circle cx="108" cy="155" r="14" stroke="#00CDB0" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="152" cy="155" r="14" stroke="#00CDB0" stroke-width="1.5" opacity="0.6"/>
+    <!-- Eye center dots -->
+    <circle cx="108" cy="155" r="5" fill="#00CDB0" opacity="0.8"/>
+    <circle cx="152" cy="155" r="5" fill="#00CDB0" opacity="0.8"/>
+
+    <!-- Scan lines across body (futuristic effect) -->
+    <line x1="42" y1="130" x2="218" y2="130" stroke="#E8733A" stroke-width="0.5" opacity="0.2"/>
+    <line x1="32" y1="165" x2="228" y2="165" stroke="#E8733A" stroke-width="0.5" opacity="0.2"/>
+    <line x1="42" y1="200" x2="218" y2="200" stroke="#E8733A" stroke-width="0.5" opacity="0.2"/>
+
+    <!-- Floating orbit ring -->
+    <ellipse cx="130" cy="165" rx="130" ry="30" stroke="#E8733A" stroke-width="1" opacity="0.2" stroke-dasharray="10,8"/>
+  </g>
+
+  <!-- Small floating mascot outlines (top right area) -->
+  <g transform="translate(1340, 40) scale(0.45)" fill="none" stroke="#E8733A" stroke-width="2.5" opacity="0.5" filter="url(#neon-soft)">
+    <circle cx="130" cy="165" r="100"/>
+    <circle cx="108" cy="155" r="22" stroke="#00CDB0"/>
+    <circle cx="152" cy="155" r="22" stroke="#00CDB0"/>
+    <line x1="115" y1="68" x2="108" y2="38" stroke="#E8733A" stroke-width="2"/>
+    <line x1="145" y1="68" x2="152" y2="38" stroke="#E8733A" stroke-width="2"/>
+    <circle cx="108" cy="33" r="8"/>
+    <circle cx="152" cy="33" r="8"/>
+  </g>
+
+  <!-- Small floating mascot (bottom left) -->
+  <g transform="translate(30, 280) scale(0.35)" fill="none" stroke="#E8733A" stroke-width="2.5" opacity="0.4" filter="url(#neon-soft)">
+    <circle cx="130" cy="165" r="100"/>
+    <circle cx="108" cy="155" r="22" stroke="#00CDB0"/>
+    <circle cx="152" cy="155" r="22" stroke="#00CDB0"/>
+    <line x1="115" y1="68" x2="108" y2="38"/>
+    <line x1="145" y1="68" x2="152" y2="38"/>
+    <circle cx="108" cy="33" r="8"/>
+    <circle cx="152" cy="33" r="8"/>
+  </g>
+
+  <!-- Floating claw icons (decorative) -->
+  <g fill="none" stroke="#E8733A" stroke-width="1.5" opacity="0.35">
+    <path d="M800,80 C795,65 786,58 778,62 C770,66 769,78 775,84 C781,90 795,87 800,80Z"/>
+    <path d="M800,80 C805,65 814,58 822,62 C830,66 831,78 825,84 C819,90 805,87 800,80Z"/>
+    <path d="M850,420 C845,405 836,398 828,402 C820,406 819,418 825,424 C831,430 845,427 850,420Z"/>
+    <path d="M850,420 C855,405 864,398 872,402 C880,406 881,418 875,424 C869,430 855,427 850,420Z"/>
+    <path d="M1450,120 C1445,105 1436,98 1428,102 C1420,106 1419,118 1425,124 C1431,130 1445,127 1450,120Z"/>
+    <path d="M1450,120 C1455,105 1464,98 1472,102 C1480,106 1481,118 1475,124 C1469,130 1455,127 1450,120Z"/>
+  </g>
+
+  <!-- BRAND TEXT -->
+  <text x="72" y="195" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="72" fill="#F5EDD8" letter-spacing="-2" filter="url(#glow-text)" opacity="0.15">MyClawAgent</text>
+  <text x="72" y="195" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="72" fill="#F5EDD8" letter-spacing="-2">MyClawAgent</text>
+  <text x="72" y="240" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="44" fill="#E8733A" letter-spacing="2">.IO</text>
+
+  <!-- Tagline -->
+  <text x="72" y="295" font-family="Arial, sans-serif" font-weight="600" font-size="22" fill="#F5EDD8" opacity="0.65" letter-spacing="1">The AI Agent That Actually Works For You.</text>
+
+  <!-- Bottom accent line -->
+  <line x1="72" y1="315" x2="520" y2="315" stroke="#E8733A" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="72" cy="315" r="3" fill="#E8733A" opacity="0.8"/>
+
+  <!-- Stats row -->
+  <text x="72" y="360" font-family="Arial, sans-serif" font-weight="800" font-size="18" fill="#E8733A" letter-spacing="0.5">24/7 ACTIVE</text>
+  <text x="72" y="380" font-family="Arial, sans-serif" font-weight="500" font-size="13" fill="#F5EDD8" opacity="0.45" letter-spacing="0.5">Always on. Always working.</text>
+
+  <text x="250" y="360" font-family="Arial, sans-serif" font-weight="800" font-size="18" fill="#E8733A" letter-spacing="0.5">SAME DAY</text>
+  <text x="250" y="380" font-family="Arial, sans-serif" font-weight="500" font-size="13" fill="#F5EDD8" opacity="0.45" letter-spacing="0.5">Live before dinner.</text>
+
+  <text x="420" y="360" font-family="Arial, sans-serif" font-weight="800" font-size="18" fill="#E8733A" letter-spacing="0.5">ZERO TECH</text>
+  <text x="420" y="380" font-family="Arial, sans-serif" font-weight="500" font-size="13" fill="#F5EDD8" opacity="0.45" letter-spacing="0.5">We handle everything.</text>
+
+  <!-- Corner accent -->
+  <path d="M0,0 L80,0 L0,80Z" fill="#E8733A" opacity="0.08"/>
+  <path d="M1500,500 L1420,500 L1500,420Z" fill="#E8733A" opacity="0.08"/>
+</svg>
