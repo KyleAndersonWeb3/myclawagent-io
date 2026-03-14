@@ -95,6 +95,32 @@ body {
 .logo-dot { color: var(--accent); }
 .logo-icon { width: 32px; height: 32px; display: block; }
 
+/* ── CUSTOM CLAW CURSOR ── */
+body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg transform='rotate(-30,16,16)'%3E%3Cellipse cx='16' cy='22' rx='6' ry='9' fill='%23E8733A'/%3E%3Cellipse cx='10' cy='10' rx='3.5' ry='7' fill='%23E8733A' transform='rotate(-20,10,10)'/%3E%3Cellipse cx='22' cy='10' rx='3.5' ry='7' fill='%23E8733A' transform='rotate(20,22,10)'/%3E%3Cellipse cx='7' cy='14' rx='3' ry='6' fill='%23E8733A' transform='rotate(-35,7,14)'/%3E%3Cellipse cx='25' cy='14' rx='3' ry='6' fill='%23E8733A' transform='rotate(35,25,14)'/%3E%3C/g%3E%3C/svg%3E") 16 16, auto;
+}
+a, button, .btn, .mascot-wrap { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg transform='rotate(-30,16,16)'%3E%3Cellipse cx='16' cy='22' rx='6' ry='9' fill='%23ff5500'/%3E%3Cellipse cx='10' cy='10' rx='3.5' ry='7' fill='%23ff5500' transform='rotate(-20,10,10)'/%3E%3Cellipse cx='22' cy='10' rx='3.5' ry='7' fill='%23ff5500' transform='rotate(20,22,10)'/%3E%3Cellipse cx='7' cy='14' rx='3' ry='6' fill='%23ff5500' transform='rotate(-35,7,14)'/%3E%3Cellipse cx='25' cy='14' rx='3' ry='6' fill='%23ff5500' transform='rotate(35,25,14)'/%3E%3C/g%3E%3C/svg%3E") 16 16, pointer; }
+
+/* ── TICKER ── */
+.ticker-wrap {
+  overflow: hidden;
+  background: var(--accent);
+  padding: 11px 0;
+}
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  animation: ticker-scroll 38s linear infinite;
+  white-space: nowrap;
+}
+.ticker span { font-size: 13px; font-weight: 500; color: #fff; font-family: 'Prompt', sans-serif; white-space: nowrap; }
+.ticker-dot { color: rgba(255,255,255,0.4) !important; font-size: 18px !important; }
+
 /* ── MASCOT ANIMATIONS ── */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
