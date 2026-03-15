@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyClawAgent — UGC Creator Brief</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Prompt', Arial, sans-serif;
+      background: #F5EDD8;
+      color: #0D0C0A;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 0 60px;
+    }
+    .header {
+      background: #0D0C0A;
+      color: #F5EDD8;
+      padding: 48px 0 40px;
+      text-align: center;
+    }
+    .header .logo { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #E8733A; text-transform: uppercase; margin-bottom: 16px; }
+    .header h1 { font-size: 42px; font-weight: 900; color: #F5EDD8; letter-spacing: -1px; margin-bottom: 8px; }
+    .header h1 span { color: #E8733A; }
+    .header .tagline { font-size: 18px; color: rgba(245,237,216,0.6); font-weight: 400; }
+    .container { max-width: 820px; margin: 0 auto; padding: 0 28px; }
+    .section { margin-top: 48px; }
+    h2 {
+      font-size: 22px; font-weight: 800; color: #0D0C0A;
+      border-left: 4px solid #E8733A;
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    h3 { font-size: 16px; font-weight: 700; color: #E8733A; margin: 24px 0 8px; }
+    p { margin-bottom: 14px; color: #1A1208; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin-bottom: 6px; color: #1A1208; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .stat-card {
+      background: #0D0C0A;
+      color: #F5EDD8;
+      border-radius: 12px;
+      padding: 20px 18px;
+    }
+    .stat-card .label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #E8733A; margin-bottom: 6px; }
+    .stat-card .value { font-size: 18px; font-weight: 800; color: #F5EDD8; }
+    .concept {
+      background: white;
+      border-radius: 12px;
+      padding: 22px 20px;
+      margin-bottom: 14px;
+      border-left: 3px solid #E8733A;
+    }
+    .concept .num { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #E8733A; text-transform: uppercase; margin-bottom: 6px; }
+    .concept h3 { font-size: 16px; font-weight: 800; color: #0D0C0A; margin: 0 0 10px; }
+    .concept p { margin: 0; font-size: 14px; color: #444; }
+    .dos-donts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .dos, .donts {
+      border-radius: 12px;
+      padding: 22px 20px;
+    }
+    .dos { background: #0D0C0A; }
+    .dos h3 { color: #E8733A; font-size: 15px; margin: 0 0 14px; }
+    .dos li { color: #F5EDD8; font-size: 14px; }
+    .donts { background: white; border: 2px solid #e5e0d5; }
+    .donts h3 { color: #0D0C0A; font-size: 15px; margin: 0 0 14px; }
+    .donts li { color: #444; font-size: 14px; }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .spec-card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      border: 1px solid #e5e0d5;
+    }
+    .spec-card .spec-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #E8733A; text-transform: uppercase; margin-bottom: 6px; }
+    .spec-card .spec-val { font-size: 15px; font-weight: 700; color: #0D0C0A; }
+    .cta-block {
+      background: #0D0C0A;
+      border-radius: 16px;
+      padding: 36px 32px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .cta-block p { color: rgba(245,237,216,0.65); margin-bottom: 6px; font-size: 15px; }
+    .cta-block a { color: #E8733A; text-decoration: none; font-weight: 700; font-size: 18px; }
+    .vibe-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+    .vibe-tag {
+      background: #0D0C0A;
+      color: #F5EDD8;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    @media (max-width: 600px) {
+      .dos-donts { grid-template-columns: 1fr; }
+      .header h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="logo">UGC Creator Brief</div>
+    <h1>MyClawAgent<span>.io</span></h1>
+    <p class="tagline">Your AI agent. Built for you. Live same day.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <h2>About the Brand</h2>
+    <p>MyClawAgent deploys and manages personal AI agents for founders, CEOs, and business owners — powered by OpenClaw. Your agent handles email triage, calendar management, CRM updates, and more, 24/7 through Telegram, WhatsApp, or Discord. We do the entire setup. You just tell us what to automate.</p>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="label">Website</div><div class="value">myclawagent.io</div></div>
+      <div class="stat-card"><div class="label">Starting Price</div><div class="value">$3,000 setup</div></div>
+      <div class="stat-card"><div class="label">Monthly Retainer</div><div class="value">$199.99/mo</div></div>
+      <div class="stat-card"><div class="label">Go-Live Time</div><div class="value">Same day</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What We Need</h2>
+    <p>50–120 second Instagram Reels and TikToks that feel native, punchy, and real. NOT polished commercials. We want content that looks like it belongs in a founder's feed — the kind of thing that makes someone stop scrolling and say "wait, this is actually real?"</p>
+    <p><strong>Think:</strong></p>
+    <ul>
+      <li>Storytelling, relatability, genuine reactions</li>
+      <li>"I can't believe this exists" energy</li>
+      <li>The founder friend who just found the tool that changed everything</li>
+      <li>Part education, part excitement, part "why didn't I have this sooner"</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>The Vibe</h2>
+    <div class="vibe-list">
+      <span class="vibe-tag">Ambitious but burnt out → calm and in control</span>
+      <span class="vibe-tag">"My agent handled it while I was sleeping"</span>
+      <span class="vibe-tag">Anti-grinding-through-your-inbox</span>
+      <span class="vibe-tag">Pro-leverage</span>
+      <span class="vibe-tag">"This is what having an EA feels like"</span>
+      <span class="vibe-tag">"I can't believe this is real"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Key Talking Points</h2>
+    <p>These are a foundation, not a script. Bring your own voice and personality.</p>
+    <ul>
+      <li>Your AI agent runs 24/7 — working while you sleep, travel, or take a day off</li>
+      <li>Handles email triage, calendar scheduling, CRM updates, meeting prep, and follow-ups</li>
+      <li>You talk to it through Telegram, WhatsApp, or Discord — like texting your most capable employee</li>
+      <li>We do the entire setup same day — no tech skills, no configuration, no headaches</li>
+      <li>Starts at $3,000 one-time — cheaper than one month of a full-time EA</li>
+      <li>Works for founders, CEOs, sales teams, agencies, investors</li>
+      <li>14 days of hands-on support after launch — we tune it until it's exactly right</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Video Concepts</h2>
+    <p>These are jumping-off points. You know your audience. Riff, remix, or go completely original.</p>
+    <p style="color:#E8733A; font-weight:700;">Hard no: anything that makes AI feel scary, robotic, or like it's replacing people negatively.</p>
+
+    <div class="concept"><div class="num">Concept 1</div><h3>The Storytime</h3><p>Tell a story about being buried in work. Emails piling up. Missed follow-ups. Forgetting a meeting. Then the pivot: "I got a MyClawAgent and now my agent sends me a morning briefing before I've had coffee. I haven't opened my inbox on my own in two weeks."</p></div>
+
+    <div class="concept"><div class="num">Concept 2</div><h3>The Discovery React</h3><p>Screen record yourself finding myclawagent.io for the first time. React genuinely. "Wait — they set this up FOR you? Same day? And it just... texts you on WhatsApp? And handles your email? Hold on, let me read this again."</p></div>
+
+    <div class="concept"><div class="num">Concept 3</div><h3>The List</h3><p>"Things my AI agent handled while I was asleep last night:" — rapid-fire: flagged 3 urgent emails, drafted 2 replies, prepped my 9am meeting, followed up with a lead I forgot about, updated the CRM. Pause. "I used to do all of that myself."</p></div>
+
+    <div class="concept"><div class="num">Concept 4</div><h3>The POV</h3><p>POV: You just booked a kickoff call with MyClawAgent at 2pm. By 6pm your agent is live, connected to your email and calendar, texting you on Telegram. Show the moment the first briefing comes in.</p></div>
+
+    <div class="concept"><div class="num">Concept 5</div><h3>The Glow-Up</h3><p>Before: Checking email at midnight, missing follow-ups, spending Sunday catching up. After: Your agent handled it. Stressed, reactive, drowning → calm, informed, ahead of everything.</p></div>
+
+    <div class="concept"><div class="num">Concept 6</div><h3>The Skit</h3><p>Two founders. One grinding through their inbox at 11pm. The other is at dinner because their agent handled it. One message to the phone, agent confirms everything's covered. "I have a MyClawAgent. What's your excuse?"</p></div>
+
+    <div class="concept"><div class="num">Concept 7</div><h3>The Hot Take</h3><p>Straight to camera: "Hiring a full-time EA costs $60,000 a year. A MyClawAgent costs $3,000 to set up and $200 a month. It works 24/7. It doesn't call in sick. And it's live the same day you book a call."</p></div>
+
+    <div class="concept"><div class="num">Concept 8</div><h3>The Trend Jack</h3><p>Use a trending sound or format and make it about finally getting leverage in your business. MyClawAgent is the payoff or punchline.</p></div>
+
+    <div class="concept"><div class="num">Concept 9</div><h3>The Walkthrough</h3><p>Green screen myclawagent.io behind you. Walk through it while reacting. "You book a call. They set everything up same day. Your agent connects to your Gmail, your calendar, your CRM. And then it just... works? Forever? For $200 a month?"</p></div>
+
+    <div class="concept"><div class="num">Concept 10</div><h3>The Confession</h3><p>"I used to be the founder who answered every email personally. Handled every follow-up. Checked Slack at midnight. Then I got a MyClawAgent. I haven't opened my inbox unprompted in three weeks. I'm a different person. A calmer person. A more profitable person."</p></div>
+  </div>
+
+  <div class="section">
+    <h2>Do's &amp; Don'ts</h2>
+    <div class="dos-donts">
+      <div class="dos">
+        <h3>✅ DO</h3>
+        <ul>
+          <li>Be yourself — your personality is why we picked you</li>
+          <li>Hook in the first 2 seconds</li>
+          <li>Make it feel like telling a friend, not reading an ad</li>
+          <li>Say "MyClawAgent" by name at least once</li>
+          <li>Show or mention myclawagent.io</li>
+          <li>Use humor, ambition, relatability</li>
+          <li>Show the founder lifestyle — time, freedom, leverage</li>
+        </ul>
+      </div>
+      <div class="donts">
+        <h3>❌ DON'T</h3>
+        <ul>
+          <li>Read a script word for word</li>
+          <li>Make it sound like a corporate tech ad</li>
+          <li>Promise specific outcomes</li>
+          <li>Call it a chatbot or compare it to ChatGPT</li>
+          <li>Use copyrighted music</li>
+          <li>Make AI feel scary or dystopian</li>
+          <li>Bury the brand</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Deliverable Specs</h2>
+    <div class="specs-grid">
+      <div class="spec-card"><div class="spec-label">Length</div><div class="spec-val">50–120 seconds</div></div>
+      <div class="spec-card"><div class="spec-label">Format</div><div class="spec-val">9:16 Vertical</div></div>
+      <div class="spec-card"><div class="spec-label">Resolution</div><div class="spec-val">1080×1920</div></div>
+      <div class="spec-card"><div class="spec-label">File Type</div><div class="spec-val">MP4</div></div>
+      <div class="spec-card"><div class="spec-label">Hashtags</div><div class="spec-val">#MyClawAgent #AIAgent #FounderLife</div></div>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <p>Questions? We're excited to see what you create.</p>
+    <a href="https://myclawagent.io">myclawagent.io</a><br><br>
+    <a href="mailto:hello@myclawagent.io" style="font-size:15px; font-weight:500;">hello@myclawagent.io</a>
+  </div>
+
+</div>
+</body>
+</html>
