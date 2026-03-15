@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="rg1" cx="65%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#E8733A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#080706" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rg2" cx="15%" cy="80%" r="38%">
+      <stop offset="0%" stop-color="#E8733A" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#080706" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#080706"/>
+  <rect width="1200" height="630" fill="url(#rg1)"/>
+  <rect width="1200" height="630" fill="url(#rg2)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#E8733A" stroke-width="0.5" opacity="0.06">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="472" x2="1200" y2="472"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="4" height="630" fill="#E8733A" opacity="0.5"/>
+
+  <!-- MASCOT — hollow wireframe right side -->
+  <g transform="translate(790, 60) scale(0.88)" fill="none" filter="url(#glow)">
+    <circle cx="175" cy="235" r="168" stroke="#E8733A" stroke-width="2.8" opacity="0.82"/>
+    <circle cx="175" cy="235" r="150" stroke="#E8733A" stroke-width="0.7" stroke-dasharray="10,8" opacity="0.18"/>
+    <!-- Scan lines -->
+    <line x1="22" y1="188" x2="328" y2="188" stroke="#E8733A" stroke-width="0.7" opacity="0.14"/>
+    <line x1="10" y1="235" x2="340" y2="235" stroke="#E8733A" stroke-width="0.7" opacity="0.14"/>
+    <line x1="22" y1="282" x2="328" y2="282" stroke="#E8733A" stroke-width="0.7" opacity="0.14"/>
+    <!-- Antennae -->
+    <line x1="148" y1="72" x2="128" y2="24" stroke="#E8733A" stroke-width="2.2" opacity="0.9"/>
+    <circle cx="124" cy="15" r="12" stroke="#E8733A" stroke-width="2.2" opacity="0.9"/>
+    <circle cx="124" cy="15" r="4" fill="#E8733A" opacity="0.65"/>
+    <line x1="202" y1="72" x2="222" y2="24" stroke="#E8733A" stroke-width="2.2" opacity="0.9"/>
+    <circle cx="226" cy="15" r="12" stroke="#E8733A" stroke-width="2.2" opacity="0.9"/>
+    <circle cx="226" cy="15" r="4" fill="#E8733A" opacity="0.65"/>
+    <!-- Arms -->
+    <circle cx="0" cy="242" r="28" stroke="#E8733A" stroke-width="2.2" opacity="0.75"/>
+    <circle cx="350" cy="242" r="28" stroke="#E8733A" stroke-width="2.2" opacity="0.75"/>
+    <!-- Legs -->
+    <rect x="140" y="394" width="20" height="44" rx="10" stroke="#E8733A" stroke-width="2" opacity="0.8"/>
+    <rect x="196" y="394" width="20" height="44" rx="10" stroke="#E8733A" stroke-width="2" opacity="0.8"/>
+    <!-- Eyes -->
+    <circle cx="136" cy="218" r="38" stroke="#00CDB0" stroke-width="2.8" opacity="0.9"/>
+    <circle cx="214" cy="218" r="38" stroke="#00CDB0" stroke-width="2.8" opacity="0.9"/>
+    <circle cx="136" cy="218" r="22" stroke="#00CDB0" stroke-width="1.5" opacity="0.4"/>
+    <circle cx="214" cy="218" r="22" stroke="#00CDB0" stroke-width="1.5" opacity="0.4"/>
+    <circle cx="136" cy="218" r="8" fill="#00CDB0" opacity="0.75"/>
+    <circle cx="214" cy="218" r="8" fill="#00CDB0" opacity="0.75"/>
+    <!-- Orbit -->
+    <ellipse cx="175" cy="235" rx="198" ry="42" stroke="#E8733A" stroke-width="1" stroke-dasharray="14,10" opacity="0.16"/>
+  </g>
+
+  <!-- LEFT: text content -->
+  <!-- Badge -->
+  <rect x="55" y="68" width="198" height="32" rx="16" fill="none" stroke="#E8733A" stroke-width="1.5" opacity="0.6"/>
+  <text x="154" y="89" font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#E8733A" text-anchor="middle" letter-spacing="1.5">POWERED BY OPENCLAW</text>
+
+  <!-- Brand name -->
+  <text x="55" y="185" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="82" fill="#F5EDD8" letter-spacing="-2">MyClawAgent</text>
+  <text x="55" y="255" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="58" fill="#E8733A" letter-spacing="3">.IO</text>
+
+  <!-- Divider -->
+  <rect x="55" y="275" width="400" height="2.5" fill="#E8733A" opacity="0.45" rx="1"/>
+
+  <!-- Tagline -->
+  <text x="55" y="318" font-family="Arial,sans-serif" font-weight="600" font-size="24" fill="#F5EDD8" opacity="0.65">The AI Agent That Actually Works For You.</text>
+
+  <!-- Sub line -->
+  <text x="55" y="358" font-family="Arial,sans-serif" font-size="18" fill="#F5EDD8" opacity="0.38">We deploy and manage your AI agent — live same day.</text>
+
+  <!-- Stats row -->
+  <rect x="55" y="410" width="130" height="72" rx="10" fill="#E8733A" fill-opacity="0.1" stroke="#E8733A" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="120" y="449" font-family="Arial,sans-serif" font-weight="900" font-size="22" fill="#E8733A" text-anchor="middle">24/7</text>
+  <text x="120" y="470" font-family="Arial,sans-serif" font-size="12" fill="#F5EDD8" opacity="0.45" text-anchor="middle">Always On</text>
+
+  <rect x="205" y="410" width="130" height="72" rx="10" fill="#E8733A" fill-opacity="0.1" stroke="#E8733A" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="270" y="449" font-family="Arial,sans-serif" font-weight="900" font-size="22" fill="#E8733A" text-anchor="middle">Same Day</text>
+  <text x="270" y="470" font-family="Arial,sans-serif" font-size="12" fill="#F5EDD8" opacity="0.45" text-anchor="middle">Deployment</text>
+
+  <rect x="355" y="410" width="130" height="72" rx="10" fill="#E8733A" fill-opacity="0.1" stroke="#E8733A" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="420" y="449" font-family="Arial,sans-serif" font-weight="900" font-size="22" fill="#E8733A" text-anchor="middle">Zero</text>
+  <text x="420" y="470" font-family="Arial,sans-serif" font-size="12" fill="#F5EDD8" opacity="0.45" text-anchor="middle">Tech Needed</text>
+
+  <!-- URL bar at bottom -->
+  <rect x="0" y="580" width="1200" height="50" fill="#E8733A" fill-opacity="0.08"/>
+  <rect x="0" y="578" width="1200" height="2" fill="#E8733A" opacity="0.25"/>
+  <text x="600" y="610" font-family="Arial,sans-serif" font-weight="700" font-size="16" fill="#E8733A" opacity="0.55" text-anchor="middle" letter-spacing="3">MYCLAWAGENT.IO</text>
+
+  <!-- Corner accents -->
+  <path d="M0,0 L60,0 L0,60Z" fill="#E8733A" opacity="0.1"/>
+  <path d="M1200,630 L1140,630 L1200,570Z" fill="#E8733A" opacity="0.1"/>
+</svg>
