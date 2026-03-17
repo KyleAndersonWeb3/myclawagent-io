@@ -531,38 +531,87 @@
     <div class="container">
       <h2>Frequently Asked Questions</h2>
       <p class="section-sub">Everything you need to know before you book your call.</p>
-      <div class="faq-list">
-        <div class="faq-item">
-          <h3>What is HyperClaw?</h3>
-          <p>HyperClaw is a fully managed AI agent that runs 24/7 on your own infrastructure. Unlike ChatGPT or Claude, it works proactively — scanning your inbox, managing your calendar, updating your CRM — without you having to ask.</p>
+      <div class="faq-accordion">
+        <div class="faq-acc-item">
+          <button class="faq-acc-q" aria-expanded="false">
+            <span>What is HyperClaw?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-acc-a">
+            <p>HyperClaw is a fully managed AI agent that runs 24/7 on your own infrastructure. Unlike ChatGPT or Claude, it works proactively — scanning your inbox, managing your calendar, updating your CRM — without you having to ask. Think of it as a digital employee that never sleeps.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h3>Do I need to be technical to use your service?</h3>
-          <p>Not at all. That's the whole point. We handle the install, security hardening, and every integration. You just tell us what you want automated and we make it happen.</p>
+        <div class="faq-acc-item">
+          <button class="faq-acc-q" aria-expanded="false">
+            <span>Do I need to be technical?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-acc-a">
+            <p>Not at all. We handle everything — you don't touch a terminal or write a single line of code. Most of our clients are non-technical founders and executives. After setup, you talk to your agent through Telegram, Discord, or WhatsApp — just like texting an assistant.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h3>How long does setup take?</h3>
-          <p>Most HyperClaw agents go live the same day as your kickoff call. We deploy, test, and hand you a working agent — usually within a few hours.</p>
+        <div class="faq-acc-item">
+          <button class="faq-acc-q" aria-expanded="false">
+            <span>Do I need to be in a specific location?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-acc-a">
+            <p>No. Most of our clients are remote — we set everything up over a video call regardless of where you are. We work with founders and teams across the US, Canada, Europe, and beyond.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h3>Is my data secure?</h3>
-          <p>Yes. Your agent runs on your own machine or private VPS — never on shared infrastructure. Every deployment follows enterprise-grade security hardening, including firewall rules and secure credential storage.</p>
+        <div class="faq-acc-item">
+          <button class="faq-acc-q" aria-expanded="false">
+            <span>Can't I just set it up myself?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-acc-a">
+            <p>You can — it's open source. But every self-install we've seen has security gaps: exposed credentials, no audit trail, no sandbox. The installation itself is manageable; the security hardening is where most people run into serious problems. If you've already set it up, we'll audit your security and fix what's missing.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h3>What messaging apps does the agent work with?</h3>
-          <p>Telegram, Discord, or WhatsApp — your choice. Most people pick the one they're already using for work.</p>
+        <div class="faq-acc-item">
+          <button class="faq-acc-q" aria-expanded="false">
+            <span>How long does setup take?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-acc-a">
+            <p>Most HyperClaw agents go live the same day as your kickoff call. We deploy, test, and hand you a working agent — usually within a few hours of getting started.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h3>What happens after the 14-day hypercare period?</h3>
-          <p>You can move to a monthly retainer for ongoing maintenance, workflow reviews, and priority support. Or take it from there yourself — the agent we built is fully yours either way.</p>
+        <div class="faq-acc-item">
+          <button class="faq-acc-q" aria-expanded="false">
+            <span>What's included in the setup?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-acc-a">
+            <p>Full installation on your machine or VPS, security hardening (Docker sandbox, firewall, exec allowlists), Composio OAuth middleware setup, email and calendar integration, up to 3 custom workflows, documentation, and 14 days of hands-on hypercare. You go live with a working agent you can message on Telegram, Discord, or WhatsApp.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h3>What's the difference between HyperClaw Onboarding and HyperClaw Agent Retainer?</h3>
-          <p>Starter covers the core setup — email, calendar, one messaging platform, security hardening, and 14-day support. Full Agent adds CRM, Slack, and custom integrations, plus ongoing monthly maintenance so your agent keeps improving over time.</p>
+        <div class="faq-acc-item">
+          <button class="faq-acc-q" aria-expanded="false">
+            <span>Is my data secure?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-acc-a">
+            <p>Yes. Your agent runs on your own machine or private VPS — never on shared infrastructure. Every deployment includes enterprise-grade security hardening: firewall rules, Docker sandboxing, secure credential storage, and a kill switch for rogue behavior.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h3>Can you set up agents for multiple people on my team?</h3>
-          <p>Yes. Each team member gets their own dedicated agent with access to exactly what they need. Many teams deploy 2–6 agents — a CEO agent, a sales agent, a finance agent — all coordinating through shared context.</p>
+        <div class="faq-acc-item">
+          <button class="faq-acc-q" aria-expanded="false">
+            <span>What happens after the 14-day hypercare period?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-acc-a">
+            <p>You can move to a monthly retainer for ongoing maintenance, workflow reviews, and priority support. Or continue independently — the agent we built is fully yours either way.</p>
+          </div>
+        </div>
+        <div class="faq-acc-item">
+          <button class="faq-acc-q" aria-expanded="false">
+            <span>Can you set up agents for multiple people on my team?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-acc-a">
+            <p>Yes. Each team member gets their own dedicated agent with access to exactly what they need. Many teams deploy 2–6 agents — CEO, Sales, Finance — all coordinating through shared context. Additional agents are available as an add-on.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -596,6 +645,25 @@
       <p class="footer-copy">© 2026 MyClawAgent.io — All rights reserved. Powered by <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a>.</p>
     </div>
   </footer>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-acc-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.faq-acc-q').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.nextElementSibling.classList.remove('open');
+        });
+        // Open clicked (if was closed)
+        if (!isOpen) {
+          btn.setAttribute('aria-expanded', 'true');
+          btn.nextElementSibling.classList.add('open');
+        }
+      });
+    });
+  </script>
 
   <script>
     const mascot = document.getElementById('mascot');
