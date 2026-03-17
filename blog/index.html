@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blog | MyClawAgent — OpenClaw Insights for Founders</title>
+  <meta name="description" content="Practical guides and real-world breakdowns on OpenClaw AI agents for founders, CEOs, and exec teams. Setup, security, automation, and more." />
+  <link rel="canonical" href="https://myclawagent.io/blog/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="MyClawAgent" />
+  <meta name="theme-color" content="#0D0C0A" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myclawagent.io/blog/" />
+  <meta property="og:title" content="Blog | MyClawAgent — OpenClaw Insights for Founders" />
+  <meta property="og:description" content="Practical guides and real-world breakdowns on OpenClaw AI agents for founders, CEOs, and exec teams." />
+  <meta property="og:image" content="https://myclawagent.io/og-image.jpg" />
+  <meta property="og:site_name" content="MyClawAgent" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0D0C0A;
+      --bg2: #141210;
+      --accent: #E8733A;
+      --accent-hover: #f08045;
+      --cream: #F5EDD8;
+      --muted: #a89f8c;
+      --border: #2a2520;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Prompt', sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--cream);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--cream); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #0D0C0A !important;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      font-size: 14px !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-hover) !important; color: #0D0C0A !important; }
+
+    /* PAGE LAYOUT */
+    .page-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 72px 24px 100px;
+    }
+
+    .page-header {
+      margin-bottom: 64px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(30px, 5vw, 50px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+
+    .page-header p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.6;
+    }
+
+    /* POST CARDS */
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .post-card {
+      display: block;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 36px 40px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+      margin-bottom: 20px;
+    }
+
+    .post-card:hover {
+      border-color: var(--accent);
+      background: var(--bg2);
+    }
+
+    .post-card-meta {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .post-card-meta span {
+      color: var(--accent);
+    }
+
+    .post-card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.3;
+      letter-spacing: -0.2px;
+      margin-bottom: 14px;
+      transition: color 0.2s;
+    }
+
+    .post-card:hover h2 {
+      color: var(--accent);
+    }
+
+    .post-card p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    .post-card-arrow {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.3px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--cream); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 16px; }
+      .nav-links { display: none; }
+      .page-wrapper { padding: 48px 18px 80px; }
+      .post-card { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="https://myclawagent.io" class="nav-logo">MyClawAgent<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="https://myclawagent.io/#how-it-works">How It Works</a></li>
+      <li><a href="https://myclawagent.io/#pricing">Pricing</a></li>
+      <li><a href="https://myclawagent.io/blog/">Blog</a></li>
+      <li><a href="https://myclawagent.io/#book" class="nav-cta">Book a Call</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <div class="page-wrapper">
+
+    <div class="page-header">
+      <h1>From the Blog</h1>
+      <p>Practical guides on OpenClaw AI agents for founders and exec teams. No fluff — just what you actually need to know.</p>
+    </div>
+
+    <div class="post-list">
+
+      <a href="https://myclawagent.io/blog/what-is-openclaw.html" class="post-card">
+        <p class="post-card-meta"><span>AI Agents</span> &nbsp;&bull;&nbsp; March 15, 2026 &nbsp;&bull;&nbsp; 8 min read</p>
+        <h2>What Is OpenClaw? The AI Agent That Actually Does Things</h2>
+        <p>ChatGPT answers questions. OpenClaw runs your business. Here's what the platform actually is, what it can do out of the box, and why non-technical founders keep hitting a wall trying to set it up themselves.</p>
+        <span class="post-card-arrow">Read more &rarr;</span>
+      </a>
+
+      <a href="https://myclawagent.io/blog/openclaw-security-risks.html" class="post-card">
+        <p class="post-card-meta"><span>Security</span> &nbsp;&bull;&nbsp; March 17, 2026 &nbsp;&bull;&nbsp; 7 min read</p>
+        <h2>Why DIY OpenClaw Setup Is a Security Risk (And What to Do Instead)</h2>
+        <p>An AI agent with access to your email, calendar, and CRM is a serious attack surface if it's configured wrong. These are the five most common security gaps in DIY OpenClaw installs — and how we address every one of them.</p>
+        <span class="post-card-arrow">Read more &rarr;</span>
+      </a>
+
+      <a href="https://myclawagent.io/blog/openclaw-email-automation.html" class="post-card">
+        <p class="post-card-meta"><span>Email Automation</span> &nbsp;&bull;&nbsp; March 17, 2026 &nbsp;&bull;&nbsp; 7 min read</p>
+        <h2>How Your OpenClaw Agent Handles Your Inbox While You Sleep (Real Workflow)</h2>
+        <p>A real breakdown of what happens when your agent is properly configured: 30-minute inbox checks, a morning briefing sent to your phone, on-demand commands from Telegram, and calendar prep before every meeting.</p>
+        <span class="post-card-arrow">Read more &rarr;</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 MyClawAgent &mdash; <a href="https://myclawagent.io">myclawagent.io</a></p>
+  </footer>
+
+</body>
+</html>
