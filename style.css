@@ -105,7 +105,7 @@ body {
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-.tenxlabs-logo-icon { height: 14px; width: auto; }
+.tenxlabs-logo-icon { height: 22px; width: auto; mix-blend-mode: multiply; border-radius: 3px; }
 
 /* ── CUSTOM CLAW CURSOR ── */
 body {
