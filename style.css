@@ -101,10 +101,11 @@ body {
   gap: 5px;
   font-size: 10px;
   font-weight: 600;
-  color: #e80101;
+  color: #555;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
+.footer .logo-acquired { color: #aaa; }
 .tenxlabs-logo-icon { height: 22px; width: auto; mix-blend-mode: multiply; border-radius: 3px; }
 
 /* ── CUSTOM CLAW CURSOR ── */
